@@ -26,6 +26,7 @@ class TasksFactory extends Factory
             'status' => $this->faker->randomElement(['pending', 'completed']),
             'created_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
             'updated_at' => now(),
+            'due_date' => $this->faker->dateTimeBetween('now', '+1 year'),
         ];
     }
 }

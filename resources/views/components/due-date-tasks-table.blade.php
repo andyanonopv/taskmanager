@@ -25,6 +25,10 @@
                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                 Due Date
             </th>
+            <th
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700">
@@ -46,10 +50,10 @@
                     {{ $record->status }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap overflow-hidden overflow-ellipsis max-w-[150px]">
-                    {{ $record->due_date }}
+                    {{ $record->due_date->format('Y-m-d H:i:s') }}
                 </td>
                 <td class="px-6 py-4 whitespace-wrap">
-                    <x-actions editRoute="route" deleteRoute="delete" :record="$record"/>
+                    <x-actions editRoute="{{ route('tasks.edit', $record->id) }}" deleteRoute="{{ route('tasks.destroy', $record->id) }}" :record="$record"/>
                 </td>
             </tr>
         @endforeach

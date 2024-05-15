@@ -42,6 +42,12 @@
                             </select>
                         </div>
                     </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <strong>{{ __('Date') }}:</strong>
+                            <input type="datetime-local" name="due_date" value="{{ $record->due_date }}" placeholder="Select a due_date" class="form-control">
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn grey btn-outline-secondary closeEditButton" data-dismiss="modal">{{ __('Back') }}</button>

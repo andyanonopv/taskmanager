@@ -52,28 +52,37 @@ function handleAction() {
     multipleButtons(deleteButtons, closeDeleteButtons, modalDelete);
 }
 
-// $('#createForm').submit(function(e) {
-//     e.preventDefault();
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
 
-//     // Serialize the form data
-//    const formData = new FormData(form);
-//     // Send an AJAX request
-//     $.ajax({
-//         type: 'POST',
-//         url: '{!! route("tasks.store") !!}',
-//         data: formData,
-//         dataType: 'json',
-//         processData: false,  
-//         contentType: false, 
-//         success: function(response) {
-//             // Handle the response message
-//             $('#cf-response-message').text(response.message);
-//         },
-//         error: function(xhr, status, error) {
-//             // Handle errors if needed
-//             console.error(xhr.responseText);
-//         }
-//     });
+
+// $("#createForm").validate({
+
+//     submitHandler: function() {
+
+//         var name = $("#name").val();
+//         var description = $("#description").val();
+//         var priority = $("#priority").val();
+
+//         // processing ajax request    
+//         $.ajax({
+//             url: "{{ route('taskSubmit') }}",
+//             type: 'POST',
+//             dataType: "json",
+//             data: {
+//                 name: name,
+//                 description: description,
+//                 priority: priority
+//             },
+//             success: function(data) {
+//                 // log response into console
+//                 console.log(data);
+//             }
+//         });
+//     }
 // });
 
 handleAction();

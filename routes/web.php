@@ -15,15 +15,7 @@ Route::get('/dashboard', function () {
 
 Route::resource('tasks', TaskController::class);
 
-Route::post('/cf-submit-form', 'FormController@submitForm')->name('cf-submit.form');
-
-
-// Route::get('/tasks', [TaskController::class,'index'])->middleware(['auth', 'verified'])->name('tasks');
-
-
-// Route::post('/tasks/create', [TaskController::class,'store'])->name('tasks.store');
-// Route::patch('/tasks/{id}', [TaskController::class, 'update'])->name('tasks.update');
-// Route::delete('/tasks/{id}', [TaskController::class, 'delete'])->name('tasks.delete');
+Route::get('/due-tasks', [TaskController::class , 'dueTasks'])->name('due-tasks');
 
 
 

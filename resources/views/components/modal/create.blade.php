@@ -33,10 +33,16 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>{{ __('Date') }}:</strong>
+                                <input type="date" name="due_date" placeholder="Select a due_date" class="form-control">
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn grey btn-outline-secondary closeBtn"
                                 data-dismiss="modal">{{ __('Back') }}</button>
-                            <button type="submit" class="btn btn-success">{{ __('Save') }}</button>
+                            <button type="submit" id="task-submit" class="btn btn-success">{{ __('Save') }}</button>
                         </div>
                     </div>
                 </div>
