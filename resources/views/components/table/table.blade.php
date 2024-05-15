@@ -1,3 +1,6 @@
+@props([
+    'model' => null,
+])
 <table class="w-4/5 divide-y divide-gray-200 dark:divide-gray-700">
     <thead>
         <tr>

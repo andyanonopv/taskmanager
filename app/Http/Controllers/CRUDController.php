@@ -19,10 +19,12 @@ class CRUDController extends Controller
         $this->viewName = $viewName;
     }
 
-    public function index()
-    {
-        $records = $this->model::all();
-        
+    public function index(Request $request)
+    {   
+        $rowsPerPage = $request->input('rowsPerPage', 10);
+
+        $records = $this->model::where('user_id', auth()->id())->paginate($rowsPerPage);
+
         return view($this->viewName, compact('records'));
     }
 
@@ -31,8 +33,6 @@ class CRUDController extends Controller
         $user = Auth::user();
 
         $validatedData = $request->validate($this->validationRules);
-
-        dd($validatedData);
 
         $record = new $this->model($validatedData);
         

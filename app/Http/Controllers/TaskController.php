@@ -24,11 +24,9 @@ class TaskController extends CRUDController
 
     public function submitPost(Request $request)
     {
-        // We are collecting all data submitting via Ajax
-        dd(1);
+        
         $input = $request->all();
 
-        // Sending json response to client
         return response()->json([
             "status" => true,
             "data" => $input
@@ -47,11 +45,30 @@ class TaskController extends CRUDController
         return view('tasks.edit', compact('task'));
     }
 
-    public function dueTasks()
+    public function dueTasks(Request $request)
     {
-        $records = Tasks::orderBy('due_date', 'asc')->get();
+        
+        $rowsPerPage = $request->input('rowsPerPage', 10);
+
+        $records = Tasks::orderBy('due_date', 'asc')->paginate($rowsPerPage);
 
         return view('tasks-due', compact('records'));
     }
 
+    public function displayRows(Request $request)
+    {
+        $table = $request->input('table');
+        $rowsPerPage = $request->input('rowsPerPage', 10);
+
+        if ($table === 'tasks') {
+            $records = Task::where('user_id', auth()->id())->paginate($rowsPerPage);
+            return view('tasks', compact('records', 'rowsPerPage'));
+        } elseif ($table === 'due-tasks') {
+         $records = DueTask::where('user_id', auth()->id())->paginate($rowsPerPage);
+         return view('due-tasks', compact('records', 'rowsPerPage'));
+        }
+
+        // Default behavior or error handling
+        return redirect()->back()->with('error', 'Invalid table identifier.');
+    }
 }

@@ -17,6 +17,10 @@ Route::resource('tasks', TaskController::class);
 
 Route::get('/due-tasks', [TaskController::class , 'dueTasks'])->name('due-tasks');
 
+Route::get('/display-rows', [TaskController::class , 'displayRows'])->name('rows');
+
+
+
 
 
 
