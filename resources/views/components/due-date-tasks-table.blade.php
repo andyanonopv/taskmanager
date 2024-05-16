@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th>
-                <form method="get" action="{{ route('due-tasks') }}" class="mb-4">
+                <form method="get" action="{{ route('due-tasks.rows') }}" class="mb-4">
                     <input type="hidden" name="table" value="tasks">
                     <label for="rowsPerPage" class="mr-2">Rows per page:</label>
                     <select name="rowsPerPage" id="rowsPerPage" class="p-2 border rounded">

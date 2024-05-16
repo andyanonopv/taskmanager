@@ -1,4 +1,7 @@
 <x-app-layout>
+    @php
+        $model = \App\Models\Tasks::all();
+    @endphp
     <x-slot name="header" class="flex">
         <div class="flex w-full justify-between">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -22,7 +25,7 @@
             <div class="w-4/5">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100 flex justify-center">
-                        <x-task-table :records="$records" />
+                        <x-table.table :models="$model" :records="$records" />
                     </div>
                 </div>
             </div>

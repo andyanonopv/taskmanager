@@ -4,20 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\CfFormController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class , 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('tasks', TaskController::class);
+Route::resource('tasks', TaskController::class)->except(['show']);
 
 Route::get('/due-tasks', [TaskController::class , 'dueTasks'])->name('due-tasks');
 
-Route::get('/display-rows', [TaskController::class , 'displayRows'])->name('rows');
+Route::get('/due-tasks/display-rows', [TaskController::class , 'displayRows'])->name('due-tasks.rows');
+
+Route::get('/tasks/display-rows', [TaskController::class , 'displayRows'])->name('tasks.rows');
 
 
 

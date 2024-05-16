@@ -47,7 +47,7 @@ class TaskController extends CRUDController
 
     public function dueTasks(Request $request)
     {
-        
+    
         $rowsPerPage = $request->input('rowsPerPage', 10);
 
         $records = Tasks::orderBy('due_date', 'asc')->paginate($rowsPerPage);
@@ -57,18 +57,11 @@ class TaskController extends CRUDController
 
     public function displayRows(Request $request)
     {
-        $table = $request->input('table');
+        
         $rowsPerPage = $request->input('rowsPerPage', 10);
 
-        if ($table === 'tasks') {
-            $records = Task::where('user_id', auth()->id())->paginate($rowsPerPage);
-            return view('tasks', compact('records', 'rowsPerPage'));
-        } elseif ($table === 'due-tasks') {
-         $records = DueTask::where('user_id', auth()->id())->paginate($rowsPerPage);
-         return view('due-tasks', compact('records', 'rowsPerPage'));
-        }
+        $records = Tasks::where('user_id', auth()->id())->paginate($rowsPerPage);
 
-        // Default behavior or error handling
-        return redirect()->back()->with('error', 'Invalid table identifier.');
+        return view('tasks', compact('records'));
     }
 }
