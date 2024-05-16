@@ -2,9 +2,7 @@
     'models' => null,
     'records' => null,
 ])
-
 @php
-    
     $attributesArray = [];
 
     if(isset($models))
@@ -33,7 +31,7 @@
                 </form>
             </th>
             @foreach ($attributesArray as $attribute)
-                <th>{{ ucfirst($attribute) }}</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">{{ ucfirst($attribute) }}</th>
             @endforeach
         </tr>
     </thead>
@@ -41,11 +39,20 @@
         @foreach ($records as $record)
             <tr>
                 @foreach ($attributesArray as $attribute)
+                    @if($attribute == 'description' || $attribute == 'name')
+                        <td class="truncate-js px-6 py-4 whitespace-nowrap max-w-[150px]">
+                            {{ $record->{$attribute} }}
+                        </td>
+                    @endif
                     <td class="px-6 py-4 whitespace-nowrap max-w-[150px]">
                         {{ $record->{$attribute} }}
                     </td>
                 @endforeach
+                <td class="px-6 py-4 whitespace-wrap">
+                    <x-actions editRoute="route" deleteRoute="delete" :record="$record"/>
+                </td>
             </tr>
+            <x-actions />
         @endforeach
     </tbody>
 </table>

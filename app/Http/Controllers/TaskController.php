@@ -17,7 +17,7 @@ class TaskController extends CRUDController
             'name' => 'required|string|max:255',
             'description' => 'nullable|string|max:1000',
             'priority' => 'required',
-            'status' => 'required',
+            'status' => 'nullable',
             'due_date' => 'nullable|date',
         ], 'tasks');
     }

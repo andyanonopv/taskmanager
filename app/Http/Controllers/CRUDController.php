@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,7 +26,12 @@ class CRUDController extends Controller
 
         $records = $this->model::where('user_id', auth()->id())->paginate($rowsPerPage);
 
-        return view($this->viewName, compact('records'));
+        $truncatedRecords = $this->model::select('id', 'name', DB::raw("SUBSTRING(description, 1, 100) AS description_short"))
+                            ->where('user_id', auth()->id())
+                            ->paginate($rowsPerPage);
+
+
+        return view($this->viewName, compact('records', 'truncatedRecords'));
     }
 
     public function store(Request $request)
