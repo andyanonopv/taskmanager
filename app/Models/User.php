@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Roles;
 use App\Models\Tasks;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,6 +12,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+    protected $role;
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_id',
     ];
 
     /**
@@ -49,5 +53,15 @@ class User extends Authenticatable
     public function tasks(): hasMany
     {
         return $this->hasMany(Tasks::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Roles::class);
+    }
+
+    public function hasRole($role)
+    {
+        return $this->role === $role; // Assuming you have a role attribute in your users table
     }
 }

@@ -39,11 +39,6 @@
         @foreach ($records as $record)
             <tr>
                 @foreach ($attributesArray as $attribute)
-                    @if($attribute == 'description' || $attribute == 'name')
-                        <td class="truncate-js px-6 py-4 whitespace-nowrap max-w-[150px]">
-                            {{ $record->{$attribute} }}
-                        </td>
-                    @endif
                     <td class="px-6 py-4 whitespace-nowrap max-w-[150px]">
                         {{ $record->{$attribute} }}
                     </td>
