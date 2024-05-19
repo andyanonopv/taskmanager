@@ -26,13 +26,7 @@
                         {{ __('Tasks Due') }}
                     </x-nav-link>
                 </div>
-                @if (Auth::user()->profile_picture)
-                    <img src="{{ Storage::url(Auth::user()->profile_picture) }}" alt="Profile Picture"
-                        class="profile-picture-class">
-                @else
-                    <img src="{{ asset('default-profile-picture.png') }}" alt="Default Profile Picture"
-                        class="profile-picture-class">
-                @endif
+
 
             </div>
 
@@ -42,7 +36,23 @@
                     <x-slot name="trigger">
                         <button
                             class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div class="flex">
+                                <div>
+                                    {{ Auth::user()->name }}
+                                </div>
+                                <div>
+                                    @if (Auth::user()->profile_picture)
+                                        <img class="rounded" style="height: 20px; width: 20px;"
+                                            src="{{ Storage::url(Auth::user()->profile_picture) }}"
+                                            alt="Profile Picture" class="profile-picture-class">
+                                    @else
+                                        <img style="height: 50px; width: 50px;"
+                                            src="{{ asset('default-profile-picture.png') }}"
+                                            alt="Default Profile Picture" class="profile-picture-class">
+                                    @endif
+                                </div>
+
+                            </div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"

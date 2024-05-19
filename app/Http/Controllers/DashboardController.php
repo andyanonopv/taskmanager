@@ -17,11 +17,11 @@ class DashboardController extends Controller
         $counter = 0;
         $pending = 0;
         $completed = 0;
-
+    
         foreach($tasks as $task)
-        {
+        {   
             $counter++;
-            if($task->completed){
+            if($task->status === 'completed'){
                 $completed++;
             } else {
                 $pending++;

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
-use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\View\View;
+use App\Http\Requests\ProfileUpdateRequest;
 
 class ProfileController extends Controller
 {
@@ -33,8 +34,16 @@ class ProfileController extends Controller
         }
 
         if ($request->hasFile('profile_picture')) {
-            $imagePath = $request->file('profile_picture')->store('profile_pictures', 'public');
-            $user->profile_picture = $imagePath;
+            $file = $request->file('profile_picture');
+            $path = $file->store('profile_pictures', 'public');
+    
+            
+            if ($request->user()->profile_picture) {
+                Storage::disk('public')->delete($request->user()->profile_picture);
+            }
+    
+            
+            $request->user()->profile_picture = $path;
         }
 
         $request->user()->save();

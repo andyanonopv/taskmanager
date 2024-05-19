@@ -1,6 +1,15 @@
-document.querySelectorAll('.truncate-js').forEach(function (element) {
-    
-    if (element.scrollWidth > element.clientWidth) {
-        // element.textContent = element.textContent.slice(0, -60) + '...';
+document.addEventListener('DOMContentLoaded', () => {
+    const table = document.querySelector('table');
+    const tableContainer = table.parentElement;
+
+    function adjustTableWidth() {
+        if (window.innerWidth < 768) {
+            table.style.width = '100%';
+        } else {
+            table.style.width = 'auto';
+        }
     }
+
+    adjustTableWidth();
+    window.addEventListener('resize', adjustTableWidth);
 });
