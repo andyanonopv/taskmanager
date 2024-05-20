@@ -1,22 +1,22 @@
 @props([
-    'editRoute' => null,
-    'deleteRoute' => null,
     'record' => null,
+    'counter' => null,
+    'editModalId' => null,
+    'deleteModalId' => null,
 ])
-
 <div class="flex items-center space-x-2">
     {{-- Edit Button --}}
     @if ($record)
-        @if (isset($editRoute))
-            <button class="btn btn-primary editBtn" type="button" data-toggle="modal"
-                data-target="#ModalEdit{{ $record->id }}">{{ __('Edit') }}</button>
-            @include('components.modal.edit')
-        @endif
+        <button class="btn btn-primary editBtn" type="button" data-target="#{{ $editModalId }}"
+            data-record-id="{{ $record->id }}">{{ __('Edit') }}</button>
+        <div class="modal fade" id="modalEdit{{ $record->id }}" tabindex="-1" role="dialog">
+            @include('components.modal.edit', ['record' => $record])
+        </div>
         {{-- Delete Button --}}
-        @if (isset($deleteRoute))
-            <button class="btn btn-primary removeBtn" type="button" data-toggle="modal"
-                data-target="#ModalDelete{{ $record->id }}">{{ __('Remove') }}</button>
-            @include('components.modal.delete')
-        @endif
+        <button class="btn btn-primary removeBtn" type="button" data-toggle="modal"
+            data-target="#{{ $deleteModalId }}"">{{ __('Remove') }}</button>
+        <div class="modal fade" id="modalDelete{{ $record->id }}" tabindex="-1" role="dialog">
+            @include('components.modal.delete', ['record' => $record])
+        </div>
     @endif
 </div>
