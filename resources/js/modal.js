@@ -7,9 +7,9 @@ var closeDeleteButtons = document.querySelectorAll('.closeRemoveBtn');
 var editButtons = document.querySelectorAll('.editBtn');
 var closeEditButtons = document.querySelectorAll('.closeEditButton');
 
-var modalCreate = document.querySelector('.modalCreate');
-var modalEdit = document.querySelector('.modalEdit');
-var modalDelete = document.querySelector('.modalDelete');
+// var modalCreate = document.querySelector('.modalCreate');
+// var modalEdit = document.querySelector('.modalEdit');
+// var modalDelete = document.querySelector('.modalDelete');
 
 var createForm = document.getElementById('createForm');
 var editForm = document.getElementById('editForm');
@@ -28,10 +28,13 @@ function singleButton(btn, closeBtn, modal) {
     }
 }
 
-function multipleButtons(btn, closeBtn, modal) {
+function multipleButtons(btn, closeBtn) {
     if(btn) {
         btn.forEach((btns, index) => {
             btns.addEventListener('click', (event) => {
+                let modalId = btn.getAttribute('data-modal-id');
+                let modal = document.getElementById(modalId);
+                console.log(modal);
                 modal.classList.add('show');
                 modal.classList.remove('close');
             });
@@ -45,44 +48,11 @@ function multipleButtons(btn, closeBtn, modal) {
 }
 
 function handleAction() {
-    singleButton(createButton, closeButton, modalCreate);
+    singleButton(createButton, closeButton);
 
-    multipleButtons(editButtons, closeEditButtons, modalEdit);
+    multipleButtons(editButtons, closeEditButtons);
 
-    multipleButtons(deleteButtons, closeDeleteButtons, modalDelete);
+    multipleButtons(deleteButtons, closeDeleteButtons);
 }
-
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-
-
-// $("#createForm").validate({
-
-//     submitHandler: function() {
-
-//         var name = $("#name").val();
-//         var description = $("#description").val();
-//         var priority = $("#priority").val();
-
-//         // processing ajax request    
-//         $.ajax({
-//             url: "{{ route('taskSubmit') }}",
-//             type: 'POST',
-//             dataType: "json",
-//             data: {
-//                 name: name,
-//                 description: description,
-//                 priority: priority
-//             },
-//             success: function(data) {
-//                 // log response into console
-//                 console.log(data);
-//             }
-//         });
-//     }
-// });
 
 handleAction();
