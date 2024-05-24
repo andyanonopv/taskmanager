@@ -7,15 +7,16 @@
 <div class="flex items-center space-x-2">
     {{-- Edit Button --}}
     @if ($record)
-        <button class="btn btn-primary editBtn" type="button" data-target="#{{ $editModalId }}"
-            data-record-id="{{ $record->id }}">{{ __('Edit') }}</button>
-        <div class="modal fade" id="modalEdit{{ $record->id }}" tabindex="-1" role="dialog">
+        <button class="btn btn-primary editBtn" type="button" data-toggle="modal" data-target="#modalEdit{{ $record->id }}">
+            {{ __('Edit') }}
+        </button>
+        <div class="modalEdit modal close" id="modalEdit{{ $record->id }}">
             @include('components.modal.edit', ['record' => $record])
         </div>
+        
         {{-- Delete Button --}}
-        <button class="btn btn-primary removeBtn" type="button" data-toggle="modal"
-            data-target="#{{ $deleteModalId }}"">{{ __('Remove') }}</button>
-        <div class="modal fade" id="modalDelete{{ $record->id }}" tabindex="-1" role="dialog">
+        <button class="btn btn-primary removeBtn" type="button" data-toggle="modal" data-target="#deleteModal{{ $record->id }}">{{ __('Remove') }}</button>
+        <div class="modalDelete modal close" id="deleteModal{{ $record->id }}">
             @include('components.modal.delete', ['record' => $record])
         </div>
     @endif

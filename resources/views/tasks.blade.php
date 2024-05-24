@@ -9,12 +9,12 @@
             </h2>
             <div class="create">
                 <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    id="createButton" data-toggle="modal" data-target="#ModalCreate">
+                    id="createButton" data-toggle="modal" data-target="#modalCreate">
                     {{ __('New') }}
                 </a>
             </div>
         </div>
-        <div class="overlay">
+        <div class="">
             @include('components.modal.create')
         </div>
     </x-slot>
