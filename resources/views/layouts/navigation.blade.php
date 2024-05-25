@@ -38,11 +38,11 @@
                             class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                             <div class="flex items-center gap-2">
                                 <div>
-                                    {{ Auth::user()->name }}
+                                    <h1 id="username">{{ Auth::user()->name }}</h1>
                                 </div>
                                 <div>
                                     @if (Auth::user()->profile_picture)
-                                        <img class="rounded" style="height: 20px; width: 20px;"
+                                        <img class="rounded profile-picture" style="height: 20px; width: 20px;"
                                             src="{{ Storage::url(Auth::user()->profile_picture) }}"
                                             alt="Profile Picture" class="profile-picture-class">
                                     @else

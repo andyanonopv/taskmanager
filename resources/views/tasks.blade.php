@@ -14,7 +14,7 @@
                 </a>
             </div>
         </div>
-        <div class="">
+        <div class="flex items-center justify-center">
             @include('components.modal.create')
         </div>
     </x-slot>

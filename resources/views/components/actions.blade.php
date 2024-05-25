@@ -15,7 +15,7 @@
         </div>
         
         {{-- Delete Button --}}
-        <button class="btn btn-primary removeBtn" type="button" data-toggle="modal" data-target="#deleteModal{{ $record->id }}">{{ __('Remove') }}</button>
+        <button class="btn btn-primary removeBtn delete" type="button" data-toggle="modal" data-target="#deleteModal{{ $record->id }}">{{ __('Remove') }}</button>
         <div class="modalDelete modal close" id="deleteModal{{ $record->id }}">
             @include('components.modal.delete', ['record' => $record])
         </div>

@@ -3,25 +3,70 @@
 @tailwind utilities;
 
 .show {
-    display: block;
+    display: block !important;
 }
 
 .close {
-    display: none;
+    display: none !important;
 }
 
-.modalEdit {
-    display: flex;
+.modalEdit , .modalDelete{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
 }
 
 .modal {
     z-index: 2;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editForm {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#deleteForm {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tag {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.item {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#username {
+    font-size: 1.2rem;
+}
+
+.profile-picture {
+    width: 40px !important;
+    height: 40px !important;
 }
