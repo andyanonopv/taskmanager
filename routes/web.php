@@ -5,6 +5,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\CfFormController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubtasksController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {

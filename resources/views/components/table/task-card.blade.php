@@ -15,10 +15,6 @@
 
 <div class="overflow-x-auto w-full flex flex-col gap-2 item">
     @foreach ($records as $record)
-        @php 
-            $editModalId = "editModal{$record->id}";
-            $deleteModalId = "deleteModal{$record->id}";
-        @endphp
         <div class="">
             <div class="task w-full flex items-center justify-between mb-2">
                 <div class="task-header">

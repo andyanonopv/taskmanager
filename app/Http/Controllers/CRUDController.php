@@ -25,7 +25,6 @@ class CRUDController extends Controller
         $rowsPerPage = $request->input('rowsPerPage', 10);
 
         $records = $this->model::where('user_id', auth()->id())->paginate($rowsPerPage);
-
         $truncatedRecords = $this->model::select('id', 'name', DB::raw("SUBSTRING(description, 1, 100) AS description_short"))
                             ->where('user_id', auth()->id())
                             ->paginate($rowsPerPage);
