@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Images;
 use Illuminate\Http\Request;
 
-class ImageController extends Controller
+class ImageController 
 {
     public function create()
     {

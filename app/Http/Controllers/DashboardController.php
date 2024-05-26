@@ -6,7 +6,7 @@ use App\Models\Tasks;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class DashboardController 
 {
     public function index()
     {       

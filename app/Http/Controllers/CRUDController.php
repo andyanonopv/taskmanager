@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 
-abstract class CRUDController extends Controller
+abstract class CRUDController 
 {
     protected $model;
     protected $viewName;

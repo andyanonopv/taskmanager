@@ -6,7 +6,7 @@ use App\Models\Tasks;
 use App\Models\Subtasks;
 use Illuminate\Http\Request;
 
-class SubtasksController extends Controller
+class SubtasksController 
 {
     public function index()
     {
