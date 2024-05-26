@@ -25,11 +25,10 @@
             <div class="w-4/5">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 w-full text-gray-900 dark:text-gray-100 flex flex-col">
-                        <x-table.task-card :models="$model" :records="$tasks" />
+                        <x-table.task-card :models="$model" :records="$tasks" :subtasks="$subtasks" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="cf-response-message"></div>
 </x-app-layout>

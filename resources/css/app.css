@@ -10,7 +10,7 @@
     display: none !important;
 }
 
-.modalEdit , .modalDelete{
+.modalEdit , .modalDelete, .modalSubtask{
     position: fixed;
     top: 0;
     left: 0;

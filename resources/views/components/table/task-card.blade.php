@@ -1,6 +1,7 @@
 @props([
     'models' => null,
     'records' => null,
+    'subtasks' => null,
 ])
 @php
     $attributesArray = [];
@@ -14,7 +15,8 @@
 @endphp
 
 <div class="overflow-x-auto w-full flex flex-col gap-2 item">
-    @foreach ($records as $record)
+    @foreach ($records as $i => $record)
+        @foreach ($subtasks as $j => $subtask)
         <div class="">
             <div class="task w-full flex items-center justify-between mb-2">
                 <div class="task-header">
@@ -33,14 +35,17 @@
                     <div class="task-date">
                         <p>{{ $record->due_date }}</p>
                     </div>
+                    @if($record->id == $subtask->task_id)
                     <div class="task-subtasks">
-
+                        <p>{{ $subtask->name }}</p>
                     </div>
+                    @endif
                 </div>
                 <div class="task-footer">
                     <x-actions :record="$record" />
                 </div>
             </div>  
         </div>
+        @endforeach
     @endforeach
 </div>

@@ -39,6 +39,30 @@ class TaskController extends CRUDController
         return view('tasks', compact('tasks', 'truncatedTasks', 'subtasks'));
     }
 
+    public function storeSubtask(Request $request, $task)
+    {
+        $user = Auth::user();
+
+        // Fetch the task using the provided task ID
+        $task = Tasks::findOrFail($task);
+
+        // Validate the incoming request data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string|max:1000',
+            'priority' => 'required|string|in:low,medium,high',
+        ]);
+
+        // Create a new subtask and associate it with the task
+        $subtask = new Subtasks($validatedData);
+        $subtask->task_id = $task->id;
+        $subtask->user_id = $user->id;
+
+        $subtask->save();
+
+        return redirect()->route('tasks.index')->with('success', 'Subtask created successfully.');
+    }
+
     public function dueTasks(Request $request)
     {
     

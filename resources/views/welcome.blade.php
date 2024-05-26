@@ -25,7 +25,7 @@
 
         ::after,
         ::before {
-            --tw-content: ''
+            --content: ''
         }
 
         :host,
@@ -258,103 +258,103 @@
         *,
         ::before,
         ::after {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
+            --border-spacing-x: 0;
+            --border-spacing-y: 0;
+            --translate-x: 0;
+            --translate-y: 0;
+            --rotate: 0;
+            --skew-x: 0;
+            --skew-y: 0;
+            --scale-x: 1;
+            --scale-y: 1;
+            --pan-x: ;
+            --pan-y: ;
+            --pinch-zoom: ;
+            --scroll-snap-strictness: proximity;
+            --gradient-from-position: ;
+            --gradient-via-position: ;
+            --gradient-to-position: ;
+            --ordinal: ;
+            --slashed-zero: ;
+            --numeric-figure: ;
+            --numeric-spacing: ;
+            --numeric-fraction: ;
+            --ring-inset: ;
+            --ring-offset-width: 0px;
+            --ring-offset-color: #fff;
+            --ring-color: rgb(59 130 246 / 0.5);
+            --ring-offset-shadow: 0 0 #0000;
+            --ring-shadow: 0 0 #0000;
+            --shadow: 0 0 #0000;
+            --shadow-colored: 0 0 #0000;
+            --blur: ;
+            --brightness: ;
+            --contrast: ;
+            --grayscale: ;
+            --hue-rotate: ;
+            --invert: ;
+            --saturate: ;
+            --sepia: ;
+            --drop-shadow: ;
+            --backdrop-blur: ;
+            --backdrop-brightness: ;
+            --backdrop-contrast: ;
+            --backdrop-grayscale: ;
+            --backdrop-hue-rotate: ;
+            --backdrop-invert: ;
+            --backdrop-opacity: ;
+            --backdrop-saturate: ;
+            --backdrop-sepia:
         }
 
         ::backdrop {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
+            --border-spacing-x: 0;
+            --border-spacing-y: 0;
+            --translate-x: 0;
+            --translate-y: 0;
+            --rotate: 0;
+            --skew-x: 0;
+            --skew-y: 0;
+            --scale-x: 1;
+            --scale-y: 1;
+            --pan-x: ;
+            --pan-y: ;
+            --pinch-zoom: ;
+            --scroll-snap-strictness: proximity;
+            --gradient-from-position: ;
+            --gradient-via-position: ;
+            --gradient-to-position: ;
+            --ordinal: ;
+            --slashed-zero: ;
+            --numeric-figure: ;
+            --numeric-spacing: ;
+            --numeric-fraction: ;
+            --ring-inset: ;
+            --ring-offset-width: 0px;
+            --ring-offset-color: #fff;
+            --ring-color: rgb(59 130 246 / 0.5);
+            --ring-offset-shadow: 0 0 #0000;
+            --ring-shadow: 0 0 #0000;
+            --shadow: 0 0 #0000;
+            --shadow-colored: 0 0 #0000;
+            --blur: ;
+            --brightness: ;
+            --contrast: ;
+            --grayscale: ;
+            --hue-rotate: ;
+            --invert: ;
+            --saturate: ;
+            --sepia: ;
+            --drop-shadow: ;
+            --backdrop-blur: ;
+            --backdrop-brightness: ;
+            --backdrop-contrast: ;
+            --backdrop-grayscale: ;
+            --backdrop-hue-rotate: ;
+            --backdrop-invert: ;
+            --backdrop-opacity: ;
+            --backdrop-saturate: ;
+            --backdrop-sepia:
         }
 
         .absolute {
@@ -542,27 +542,27 @@
         }
 
         .bg-white {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+            --bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--bg-opacity))
         }
 
         .bg-gradient-to-b {
-            background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
+            background-image: linear-gradient(to bottom, var(--gradient-stops))
         }
 
         .from-transparent {
-            --tw-gradient-from: transparent var(--tw-gradient-from-position);
-            --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+            --gradient-from: transparent var(--gradient-from-position);
+            --gradient-to: rgb(0 0 0 / 0) var(--gradient-to-position);
+            --gradient-stops: var(--gradient-from), var(--gradient-to)
         }
 
         .via-white {
-            --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-            --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)
+            --gradient-to: rgb(255 255 255 / 0) var(--gradient-to-position);
+            --gradient-stops: var(--gradient-from), #fff var(--gradient-via-position), var(--gradient-to)
         }
 
         .to-white {
-            --tw-gradient-to: #fff var(--tw-gradient-to-position)
+            --gradient-to: #fff var(--gradient-to-position)
         }
 
         .stroke-\[\#FF2D20\] {
@@ -638,13 +638,13 @@
         }
 
         .text-black {
-            --tw-text-opacity: 1;
-            color: rgb(0 0 0 / var(--tw-text-opacity))
+            --text-opacity: 1;
+            color: rgb(0 0 0 / var(--text-opacity))
         }
 
         .text-white {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity))
+            --text-opacity: 1;
+            color: rgb(255 255 255 / var(--text-opacity))
         }
 
         .underline {
@@ -658,33 +658,33 @@
         }
 
         .shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\] {
-            --tw-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.08);
-            --tw-shadow-colored: 0px 14px 34px 0px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+            --shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.08);
+            --shadow-colored: 0px 14px 34px 0px var(--shadow-color);
+            box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow)
         }
 
         .ring-1 {
-            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+            --ring-offset-shadow: var(--ring-inset) 0 0 0 var(--ring-offset-width) var(--ring-offset-color);
+            --ring-shadow: var(--ring-inset) 0 0 0 calc(1px + var(--ring-offset-width)) var(--ring-color);
+            box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow, 0 0 #0000)
         }
 
         .ring-transparent {
-            --tw-ring-color: transparent
+            --ring-color: transparent
         }
 
         .ring-white\/\[0\.05\] {
-            --tw-ring-color: rgb(255 255 255 / 0.05)
+            --ring-color: rgb(255 255 255 / 0.05)
         }
 
         .drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\] {
-            --tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.06));
-            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+            --drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.06));
+            filter: var(--blur) var(--brightness) var(--contrast) var(--grayscale) var(--hue-rotate) var(--invert) var(--saturate) var(--sepia) var(--drop-shadow)
         }
 
         .drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
-            --tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
-            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+            --drop-shadow: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
+            filter: var(--blur) var(--brightness) var(--contrast) var(--grayscale) var(--hue-rotate) var(--invert) var(--saturate) var(--sepia) var(--drop-shadow)
         }
 
         .transition {
@@ -700,28 +700,28 @@
         }
 
         .selection\:bg-\[\#FF2D20\] *::selection {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 45 32 / var(--tw-bg-opacity))
+            --bg-opacity: 1;
+            background-color: rgb(255 45 32 / var(--bg-opacity))
         }
 
         .selection\:text-white *::selection {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity))
+            --text-opacity: 1;
+            color: rgb(255 255 255 / var(--text-opacity))
         }
 
         .selection\:bg-\[\#FF2D20\]::selection {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 45 32 / var(--tw-bg-opacity))
+            --bg-opacity: 1;
+            background-color: rgb(255 45 32 / var(--bg-opacity))
         }
 
         .selection\:text-white::selection {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity))
+            --text-opacity: 1;
+            color: rgb(255 255 255 / var(--text-opacity))
         }
 
         .hover\:text-black:hover {
-            --tw-text-opacity: 1;
-            color: rgb(0 0 0 / var(--tw-text-opacity))
+            --text-opacity: 1;
+            color: rgb(0 0 0 / var(--text-opacity))
         }
 
         .hover\:text-black\/70:hover {
@@ -729,7 +729,7 @@
         }
 
         .hover\:ring-black\/20:hover {
-            --tw-ring-color: rgb(0 0 0 / 0.2)
+            --ring-color: rgb(0 0 0 / 0.2)
         }
 
         .focus\:outline-none:focus {
@@ -738,14 +738,14 @@
         }
 
         .focus-visible\:ring-1:focus-visible {
-            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+            --ring-offset-shadow: var(--ring-inset) 0 0 0 var(--ring-offset-width) var(--ring-offset-color);
+            --ring-shadow: var(--ring-inset) 0 0 0 calc(1px + var(--ring-offset-width)) var(--ring-color);
+            box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow, 0 0 #0000)
         }
 
         .focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-            --tw-ring-opacity: 1;
-            --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity))
+            --ring-opacity: 1;
+            --ring-color: rgb(255 45 32 / var(--ring-opacity))
         }
 
         @media (min-width: 640px) {
@@ -820,8 +820,8 @@
             }
 
             .lg\:text-\[\#FF2D20\] {
-                --tw-text-opacity: 1;
-                color: rgb(255 45 32 / var(--tw-text-opacity))
+                --text-opacity: 1;
+                color: rgb(255 45 32 / var(--text-opacity))
             }
         }
 
@@ -835,22 +835,22 @@
             }
 
             .dark\:bg-black {
-                --tw-bg-opacity: 1;
-                background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+                --bg-opacity: 1;
+                background-color: rgb(0 0 0 / var(--bg-opacity))
             }
 
             .dark\:bg-zinc-900 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(24 24 27 / var(--tw-bg-opacity))
+                --bg-opacity: 1;
+                background-color: rgb(24 24 27 / var(--bg-opacity))
             }
 
             .dark\:via-zinc-900 {
-                --tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position);
-                --tw-gradient-stops: var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)
+                --gradient-to: rgb(24 24 27 / 0) var(--gradient-to-position);
+                --gradient-stops: var(--gradient-from), #18181b var(--gradient-via-position), var(--gradient-to)
             }
 
             .dark\:to-zinc-900 {
-                --tw-gradient-to: #18181b var(--tw-gradient-to-position)
+                --gradient-to: #18181b var(--gradient-to-position)
             }
 
             .dark\:text-white\/50 {
@@ -858,8 +858,8 @@
             }
 
             .dark\:text-white {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
+                --text-opacity: 1;
+                color: rgb(255 255 255 / var(--text-opacity))
             }
 
             .dark\:text-white\/70 {
@@ -867,13 +867,13 @@
             }
 
             .dark\:ring-zinc-800 {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(39 39 42 / var(--tw-ring-opacity))
+                --ring-opacity: 1;
+                --ring-color: rgb(39 39 42 / var(--ring-opacity))
             }
 
             .dark\:hover\:text-white:hover {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
+                --text-opacity: 1;
+                color: rgb(255 255 255 / var(--text-opacity))
             }
 
             .dark\:hover\:text-white\/70:hover {
@@ -885,18 +885,18 @@
             }
 
             .dark\:hover\:ring-zinc-700:hover {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(63 63 70 / var(--tw-ring-opacity))
+                --ring-opacity: 1;
+                --ring-color: rgb(63 63 70 / var(--ring-opacity))
             }
 
             .dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity))
+                --ring-opacity: 1;
+                --ring-color: rgb(255 45 32 / var(--ring-opacity))
             }
 
             .dark\:focus-visible\:ring-white:focus-visible {
-                --tw-ring-opacity: 1;
-                --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity))
+                --ring-opacity: 1;
+                --ring-color: rgb(255 255 255 / var(--ring-opacity))
             }
         }
     </style>

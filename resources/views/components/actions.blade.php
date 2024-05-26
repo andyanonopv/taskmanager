@@ -5,6 +5,13 @@
 <div class="flex items-center space-x-2">
     {{-- Edit Button --}}
     @if ($record)
+        <button class="createSubtasksBtn" type="button" data-toggle="modal" data-target="#modalSubtasks{{ $record->id }}">
+            {{ __('Add Subtask') }}
+        </button>
+        <div class="modalSubtask modal close" id="modalSubtasks{{ $record->id }}">
+            @include('components.modal.create-subtask')
+        </div>
+        
         <button class="editBtn" type="button" data-toggle="modal" data-target="#modalEdit{{ $record->id }}">
             {{ __('Edit') }}
         </button>

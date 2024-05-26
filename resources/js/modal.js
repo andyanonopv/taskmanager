@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteButtons = document.querySelectorAll('.removeBtn');
     const closeDeleteButtons = document.querySelectorAll('.closeRemoveBtn');
     const deleteModals = document.querySelectorAll('.modalDelete');
+
+    //Elements for subtasks modals
+    const createSubtasksBtn = document.querySelectorAll('.createSubtasksBtn');
+    const closeSubtasksButtons = document.querySelectorAll('.closeSubtasksBtn');
+    const subtasksModals = document.querySelectorAll('.modalSubtask');
     
     // Function to handle multiple buttons and corresponding modals
     function handleMultipleButtons(buttons, closeButtons, modals) {
@@ -44,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     
+    if (createSubtasksBtn.length > 0 && closeSubtasksButtons.length > 0 && subtasksModals.length > 0) {
+        handleMultipleButtons(createSubtasksBtn, closeSubtasksButtons, subtasksModals);
+    }
+
     if (editButtons.length > 0 && closeEditButtons.length > 0 && editModals.length > 0) {
         handleMultipleButtons(editButtons, closeEditButtons, editModals);
     }
